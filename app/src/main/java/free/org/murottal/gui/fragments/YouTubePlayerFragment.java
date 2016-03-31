@@ -75,6 +75,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 
 	private static final int HUD_VISIBILITY_TIMEOUT = 7000;
 	private static final String TAG = YouTubePlayerFragment.class.getSimpleName();
+	private Murottal murottal;
 
 
 	@Override
@@ -150,6 +151,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 
 			new CheckIfUserSubbedToChannelTask(videoDescSubscribeButton, youTubeVideo.getChannelId()).execute();
 		}
+		murottal = new Murottal(getActivity().getApplicationContext());
 
 		return view;
 	}
@@ -186,7 +188,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 		mediaPlayer.setVolume(0f, 0f);
 		showHud();
 
-		Murottal murottal = new Murottal(getActivity().getApplicationContext());
+		//Play Murottal
 		murottal.start();
 	}
 

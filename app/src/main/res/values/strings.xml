@@ -13,8 +13,8 @@
 		Order is important.  Refer to VideoCategory enum.
 	 -->
 	<string-array name="video_categories">
-		<item>Featured</item>
-		<item>Most Popular</item>
+		<item>Upin Ipin</item>
+		<item>Boboi Boy</item>
 	</string-array>
 
 	<!-- TODO: Remove or change this placeholder text -->

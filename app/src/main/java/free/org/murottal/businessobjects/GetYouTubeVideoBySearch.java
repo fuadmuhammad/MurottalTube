@@ -56,7 +56,7 @@ public class GetYouTubeVideoBySearch extends GetYouTubeVideos {
 		videosList.setKey(SkyTubeApp.getStr(R.string.API_KEY));
 		videosList.setType("video");
 		//videosList.setRegionCode(getPreferredRegion());	// there is a bug in V3 API, so this does not work:  https://code.google.com/p/gdata-issues/issues/detail?id=6383 and https://code.google.com/p/gdata-issues/issues/detail?id=6913
-		videosList.setSafeSearch("none");
+		videosList.setSafeSearch("strict");
 		videosList.setMaxResults(MAX_RESULTS);
 		nextPageToken = null;
 	}

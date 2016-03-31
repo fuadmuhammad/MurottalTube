@@ -4,7 +4,25 @@
 	<!--
 		Skytube
 	 -->
-	<!--<PreferenceCategory
+	<PreferenceCategory
+		android:title="@string/murottal_loc_title"
+		android:key="@string/murottal_loc_key">
+		<CheckBoxPreference
+            android:key="@string/default_murottal_loc_key"
+			android:title="@string/default_murottal_loc_title"
+			android:summary="@string/default_murottal_summary"
+			android:defaultValue="true"
+			android:disableDependentsState="true"/>
+
+        <Preference
+            android:title="@string/custom_murottal_loc_title"
+            android:key="@string/custom_murottal_loc_key"
+			android:dependency="@string/default_murottal_loc_key"
+            />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory
 		android:title="@string/pref_languages_category"
 		android:key="pref_key_languages">
 		<ListPreference
@@ -22,24 +40,6 @@
 			android:entries="@array/languages_names"
 			android:entryValues="@array/languages_codes"
 			android:defaultValue="@array/default_language"/>
-	</PreferenceCategory>
-	-->
-	<PreferenceCategory
-		android:title="@string/murottal_loc_title"
-		android:key="@string/murottal_loc_key">
-		<CheckBoxPreference
-            android:key="@string/default_murottal_loc_key"
-			android:title="@string/default_murottal_loc_title"
-			android:summary="@string/default_murottal_summary"
-			android:defaultValue="true"
-			android:disableDependentsState="true"/>
-
-        <Preference
-            android:title="@string/custom_murottal_loc_title"
-            android:key="@string/custom_murottal_loc_key"
-			android:dependency="@string/default_murottal_loc_key"
-            />
-
 	</PreferenceCategory>
 
 	<!--

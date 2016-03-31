@@ -77,16 +77,20 @@ public enum VideoCategory {
 	 * @return New instance of {@link GetYouTubeVideos}.
 	 */
 	public GetYouTubeVideos createGetYouTubeVideos() {
-		if (id == FEATURED.id)
-			return new GetFeaturedVideos();
-		else if (id == MOST_POPULAR.id)
-			return new GetMostPopularVideos();
+		if (id == FEATURED.id) {
+			//return new GetFeaturedVideos();
+			return new GetKidsChannel("Upin Ipin");
+		}
+		else if (id == MOST_POPULAR.id) {
+			//return new GetMostPopularVideos();
+			return new GetKidsChannel("Boboi Boy");
+		}
 		else if (id == SEARCH_QUERY.id)
 			return new GetYouTubeVideoBySearch();
 		else if (id == CHANNEL_VIDEOS.id)
 			return new GetChannelVideos();
-
-		return null;
+		else
+			return null;
 	}
 
 }
