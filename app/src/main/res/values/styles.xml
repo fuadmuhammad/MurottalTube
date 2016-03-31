@@ -1,0 +1,117 @@
+<resources>
+	
+	<!-- SkyTube theme -->
+	<!--<style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">-->
+	<style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+		<item name="@attr/subscribeButtonStyle">@style/SubscribeButton</item>
+	</style>
+
+	<!-- *************************************************************************************** -->
+	<!--
+		Video Grid
+	-->
+
+	<style name="GridTextView" parent="AppTheme">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">#FFF</item>
+		<item name="android:background">#000</item>
+	</style>
+
+	<style name="GridMicroDetailsTextView" parent="GridTextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:padding">2dp</item>
+		<item name="android:background">#BA000000</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textSize">12.9sp</item>
+	</style>
+
+	<style name="GridDetailsTextView" parent="GridTextView">
+		<item name="android:textColor">#808080</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textSize">12.9sp</item>
+	</style>
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+		Subs Drawer
+	-->
+
+	<style name="SubsTextView" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/subs_text</item>
+		<item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+	</style>
+
+	<style name="SubscribeButton" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/subs_text</item>
+		<item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+		<item name="android:minHeight">0dp</item>
+		<item name="android:minWidth">0dp</item>
+		<item name="android:padding">3dp</item>
+		<item name="android:background">@drawable/subscribe_button_background</item>
+		<item name="android:text">@string/subscribe</item>
+	</style>
+
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+	 	Video Player
+	-->
+
+	<style name="VideoPlayerActivityTheme" parent="AppTheme">
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowActionBarOverlay">true</item>
+		<item name="android:actionBarStyle">@style/VideoPlayerActionBarTheme</item>
+	</style>
+
+	<style name="VideoPlayerActionBarTheme" parent="android:Widget.Holo.Light.ActionBar.Solid.Inverse" >
+		<!-- Actionbar background colour -->
+		<item name="android:background">@color/video_player_hud</item>
+
+		<!-- hide app's icon/logo -->
+		<item name="android:icon">@android:color/transparent</item>
+
+		<item name="android:displayOptions">showHome|homeAsUp|showTitle</item>
+	</style>
+
+	<!-- Video Description -->
+	<style name="VideoDescTextView" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/video_player_drawer_text</item>
+		<item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+	</style>
+
+	<!-- Comments -->
+	<style name="CommentTextView" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/comment_text</item>
+		<item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+	</style>
+	
+	<style name="CommentInfoTextView" parent="CommentTextView">
+		<item name="android:textSize">12sp</item>
+	</style>
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+	 	Channel Browser
+	-->
+
+	<style name="ChannelDetailsTextView" parent="AppTheme">
+		<item name="android:textColor">#F5F5F5FF</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+	</style>
+
+
+</resources>

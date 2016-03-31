@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "free.org.murottal"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        // 100% Open-Source Edition
+        oss {
+            applicationId "free.org.murottal.oss"
+            versionName "1.0"
+            resValue "string", "app_name", "MurottalTube"
+        }
+        // 99% Open-source edition:  uses the YouTube Player Jar [i.e. proprietary module]
+        nonFree {
+            applicationId "free.org.murottal.hd"
+            versionName "1.0"
+            resValue "string", "app_name", "MurottalTube"
+        }
+    }
+}
+
+configurations {
+    nonFreeCompile
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'http://guardian.github.com/maven/repo-releases' }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    nonFreeCompile files('libs/YouTubeAndroidPlayerApi.jar')
+
+    compile group: 'org.ocpsoft.prettytime', name: 'prettytime', version: '3.2.7.Final'
+    compile 'com.google.http-client:google-http-client-android:1.20.0'
+    compile 'com.google.apis:google-api-services-youtube:v3-rev151-1.20.0'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'org.mozilla:rhino:1.7.7'
+    compile 'com.github.moraisigor:slidingdrawer:1.5.5'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile ('net.rdrei.android.dirchooser:library:3.2@aar') { transitive = true; }
+}
